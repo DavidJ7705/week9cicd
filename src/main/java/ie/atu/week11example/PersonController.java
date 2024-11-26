@@ -40,4 +40,10 @@ public class PersonController {
         personService.deletePerson(id);
         return new ResponseEntity<>("Person Deleted Successfully", HttpStatus.OK);
     }
+
+    @PutMapping("/{email}")
+    public ResponseEntity<String> updatePerson(@PathVariable String email, @RequestBody Person updatedPerson){
+        personService.updatePerson(email,updatedPerson);
+        return new ResponseEntity<>("Person updated Successfully",HttpStatus.OK);
+    }
 }
