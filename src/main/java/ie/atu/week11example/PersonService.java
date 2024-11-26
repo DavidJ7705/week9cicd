@@ -4,14 +4,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonService {
-    public PersonService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public PersonService(PersonRepository productRepository) {
+        this.personRepository = productRepository;
     }
 
-    private ProductRepository productRepository;
+    private PersonRepository personRepository;
     // Placeholder method to save a person (add to Db in the next two weeks)
     public void savePerson(Person person) {
-        productRepository.save(person);
+        personRepository.save(person);
         System.out.println("Person saved: " + person);
     }
 

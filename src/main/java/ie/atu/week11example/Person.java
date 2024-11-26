@@ -40,4 +40,15 @@ public class Person {
     @NotBlank
     private String department;
 
+
+    public Person(Long id, String name, int age, String email, String title, String employeeId, String position, String department) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.title = title;
+        this.employeeId = employeeId;
+        this.position = position;
+        this.department = department;
+    }
 }
